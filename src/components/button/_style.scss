@@ -1,3 +1,53 @@
-.button {
-  background-color: $primary;
+.xy-button {
+  position: relative;
+  display: inline;
+  outline: none;
+  line-height: $btn-line-height;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: none;
+  border: $btn-border-width solid transparent;
+  cursor: pointer;
+  box-shadow: $btn-box-shadow;
+  @each $key, $val in $btn-sizes {
+    &-#{$key} {
+      @if $key == 'mini' {
+        @include button-size($btn-padding-y-mini, $btn-padding-x-mini, $btn-font-size-mini, $border-radius-mini);
+      } @else if $key == 'sm' {
+        @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $border-radius-sm);
+      } @else if $key == 'default' {
+        @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+      } @else {
+        @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $border-radius-lg);
+      }
+    }
+  }
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $border-radius);
+  transition: $btn-transition;
+  @each $key, $val in $btn-types {
+    &-#{$key} {
+      @if $key == 'default' {
+        @include button-style($val, $gray-300, $gray-600)
+      } @else {
+        @include button-style($val, $val, $white)
+      }
+    }
+    &.ghost-#{$key} {
+      background: transparent;
+      color: $val;
+    }
+  }
+  &-disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
+  }
+  &-block {
+    display: block;
+  }
 }
