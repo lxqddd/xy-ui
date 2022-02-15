@@ -10,9 +10,6 @@
 <script lang="ts" setup>
 import { defineProps, withDefaults, defineEmits } from 'vue'
 import classNames from 'classnames'
-// import type { ButtonProps } from './types'
-
-import type { ExtractPropTypes } from 'vue'
 /** 按钮类型 */
 export type ButtonType = 'default' | 'primary' | 'info' | 'success' | 'warning' | 'danger'
 /** 按钮尺寸 */

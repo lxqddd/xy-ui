@@ -13,4 +13,32 @@ describe('test Button.vue', () => {
     })
     expect(wrapper.classes()).toContain('xy-button-success')
   })
+
+  it('should show difficult size button when we set size', () => {
+    const wrapper = mount(Button, {
+      props: {
+        size: 'mini'
+      }
+    })
+    expect(wrapper.classes()).toContain('xy-button-mini')
+  })
+
+  it('should show text when we set slot', () => {
+    const wrapper = mount(Button, {
+      slots: {
+        default: TEXT
+      }
+    })
+    expect(wrapper.text()).toEqual(TEXT)
+  })
+
+  it('should can not be call when we set disabled equal true', async () => {
+    const wrapper = mount(Button, {
+      props: {
+        disabled: true
+      }
+    })
+    await wrapper.trigger('click')
+    expect(wrapper.emitted('click')).toBeUndefined()
+  })
 })
