@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Icon />
+    <Icon :size="'ri-10x'" />
     <h3>mini 按钮</h3>
     <Button size="mini">
       小按钮
