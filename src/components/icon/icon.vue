@@ -36,7 +36,7 @@ const props = withDefaults(defineProps<IIconProps>(), {
   size: 'ri-fw',
   className: ''
 })
-const classes = classNames(props.className, props.size, {
+const classes = classNames('xy-icon', props.className, props.size, {
   [`ri-${props.name}-${props.type}`]: props.name && props.type
 })
 </script>

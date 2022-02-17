@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils'
 import Button from './button.vue'
-import { ButtonProps } from './types'
 
 const TEXT = 'xy is cool'
 
