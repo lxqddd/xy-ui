@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Icon :size="'ri-10x'" />
+    <XyIcon :size="'ri-10x'" />
     <h3>mini 按钮</h3>
     <Button size="mini">
       小按钮
@@ -56,7 +56,7 @@
 
 <script lang="ts" setup>
 import Button from './components/button/button.vue'
-import Icon from './components/icon/icon.vue'
+// import Icon from './components/icon/icon.vue'
 const handleClick = (e: MouseEvent) => {
   console.log(e)
 }

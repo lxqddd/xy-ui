@@ -3,6 +3,10 @@
     :class="classes"
     @click="handleClick"
   >
+    <XyIcon
+      :name="'home'"
+      :type="'line'"
+    />
     <slot />
   </button>
 </template>
