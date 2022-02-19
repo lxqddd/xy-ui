@@ -2,61 +2,59 @@
   <div id="app">
     <XyIcon :size="'ri-10x'" />
     <h3>mini 按钮</h3>
-    <Button size="mini">
+    <XyButton size="mini">
       小按钮
-    </Button>
+    </XyButton>
     <hr>
     <h3>small 按钮</h3>
-    <Button size="sm">
+    <XyButton size="sm">
       small 按钮
-    </Button>
+    </XyButton>
     <hr>
     <h3>
       默认按钮
     </h3>
-    <Button type="default">
+    <XyButton type="default">
       这是按钮组件
-    </Button>
-    <Button
+    </XyButton>
+    <XyButton
       type="primary"
       disabled
       @click="handleClick"
     >
       这是按钮组件
-    </Button>
-    <Button
+    </XyButton>
+    <XyButton
       type="info"
       :block="true"
     >
       这是按钮组件
-    </Button>
-    <Button
+    </XyButton>
+    <XyButton
       type="success"
       :ghost="true"
     >
       这是按钮组件
-    </Button>
-    <Button type="warning">
+    </XyButton>
+    <XyButton type="warning">
       这是按钮组件
-    </Button>
-    <Button type="danger">
+    </XyButton>
+    <XyButton type="danger">
       这是按钮组件
-    </Button>
+    </XyButton>
     <hr>
     <h3>大按钮</h3>
-    <Button
+    <XyButton
       size="lg"
       @hover="handleHover"
     >
       大按钮
-    </Button>
+    </XyButton>
     <hr>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Button from './components/button/button.vue'
-// import Icon from './components/icon/icon.vue'
 const handleClick = (e: MouseEvent) => {
   console.log(e)
 }

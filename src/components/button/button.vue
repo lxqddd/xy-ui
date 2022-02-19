@@ -75,3 +75,6 @@ const handleClick = (e: MouseEvent) => {
   emits('click', e)
 }
 </script>
+<script lang="ts">
+export default { name: 'XyButton' }
+</script>

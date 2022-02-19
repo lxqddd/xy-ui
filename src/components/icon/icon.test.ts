@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Icon from './icon.vue'
+import XyIcon from './icon.vue'
 
 describe('Icon components test', () => {
   it('should has icon name class when we set name and type props', () => {
-    const wrapper = mount(Icon, {
+    const wrapper = mount(XyIcon, {
       props: {
         name: 'home',
         type: 'line'
@@ -13,7 +13,7 @@ describe('Icon components test', () => {
   })
 
   it('should has size class when we set size props', () => {
-    const wrapper = mount(Icon, {
+    const wrapper = mount(XyIcon, {
       props: {
         name: 'home',
         type: 'line',
@@ -24,7 +24,7 @@ describe('Icon components test', () => {
   })
 
   it('should has customer className when we set className props', () => {
-    const wrapper = mount(Icon, {
+    const wrapper = mount(XyIcon, {
       props: {
         name: 'home',
         type: 'line',
