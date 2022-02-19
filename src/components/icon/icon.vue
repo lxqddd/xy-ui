@@ -5,6 +5,7 @@
 <script lang="ts" setup>
 import { defineProps, withDefaults } from 'vue'
 import classNames from 'classnames'
+import { XyUIComponent } from '@/utils'
 type IconSize = 'ri-fw'
                 | 'ri-xxs'
                 | 'ri-xs'
@@ -22,7 +23,7 @@ type IconSize = 'ri-fw'
                 | 'ri-9x'
                 | 'ri-10x'
                 | ''
-interface IIconProps {
+interface IIconProps extends XyUIComponent {
   name: string
   type: 'line' | 'file'
   color?: string
