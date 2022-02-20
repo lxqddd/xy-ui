@@ -2,7 +2,16 @@
   <div id="app">
     <XyIcon :size="'ri-10x'" />
     <h3>mini 按钮</h3>
-    <XyButton size="mini">
+    <XyButton
+      name="home"
+      size="mini"
+    >
+      <template #append>
+        <XyIcon
+          name="home"
+          size="ri-1x"
+        />
+      </template>
       小按钮
     </XyButton>
     <hr>

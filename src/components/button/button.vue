@@ -3,11 +3,9 @@
     :class="classes"
     @click="handleClick"
   >
-    <XyIcon
-      :name="'home'"
-      :type="'line'"
-    />
+    <slot name="prev" />
     <slot />
+    <slot name="append" />
   </button>
 </template>
 
@@ -33,8 +31,6 @@ export interface IButtonPropsType {
   color?: string
   /** 按钮是否透明 */
   ghost?: boolean
-  /** 按钮中图标的位置 */
-  iconPlacement?: 'left' | 'right'
   /** 按钮是否在加载状态 */
   loading?: boolean
   /** 是否展示为文本按钮 */
@@ -52,7 +48,6 @@ const props = withDefaults(defineProps<IButtonPropsType>(), {
   circle: false,
   color: '',
   ghost: false,
-  iconPlacement: 'left',
   loading: false,
   text: false,
   textColor: ''

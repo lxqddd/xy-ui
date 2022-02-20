@@ -1,5 +1,7 @@
 import { mount } from '@vue/test-utils'
+import { defineComponent } from 'vue'
 import Button from './button.vue'
+import Icon from '@/components/icon/icon.vue'
 
 const TEXT = 'xy is cool'
 
@@ -39,5 +41,16 @@ describe('test Button.vue', () => {
     })
     await wrapper.trigger('click')
     expect(wrapper.emitted('click')).toBeUndefined()
+  })
+
+  it('should has a prev icon when we set prev slot as a icon component', () => {
+    // const App = defineComponent({
+    //   setup: () => () =>
+    //   (
+    //     <Button>
+    //       Loading
+    //     </Button>
+    //   )
+    // })
   })
 })
