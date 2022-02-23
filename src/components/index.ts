@@ -1,10 +1,12 @@
 import { App } from 'vue'
 import Button from './button'
 import Icon from './icon'
+import Avatar from './avatar'
 
 const components = [
   Button,
-  Icon
+  Icon,
+  Avatar
 ]
 
 export default {

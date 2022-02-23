@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <XyAvatar>
+      hello world
+    </XyAvatar>
     <XyIcon :size="'ri-10x'" />
     <h3>mini 按钮</h3>
     <XyButton
