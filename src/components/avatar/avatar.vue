@@ -1,5 +1,8 @@
 <template>
-  <div :class="classes">
+  <div
+    :class="classes"
+    :style="style"
+  >
     <slot />
   </div>
 </template>
@@ -11,6 +14,7 @@ import classNames from 'classnames'
 type sizeType = 'small' | 'medium' | 'large'
 
 interface IAvatarProps {
+  src?: string
   size?: sizeType | number
   bgColor?: string
   failBackSrc?: string
@@ -22,6 +26,7 @@ interface IAvatarProps {
 }
 
 const props = withDefaults(defineProps<IAvatarProps>(), {
+  src: '',
   size: 'medium',
   bgColor: '#FFF',
   failBackSrc: '',
@@ -31,6 +36,11 @@ const props = withDefaults(defineProps<IAvatarProps>(), {
   className: '',
   onError: undefined
 })
+
+const style = {
+  background: `url('${props.src || props.failBackSrc}')`,
+  backgroundColor: props.bgColor
+}
 
 const classes = classNames('xy-avatar', props.className, {
   round: props.round,

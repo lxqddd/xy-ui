@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'vue/require-valid-default-prop': 'off',
-    'vue/require-default-prop': 'off'
+    'vue/require-default-prop': 'off',
+    'quotes': 'off'
   }
 }
