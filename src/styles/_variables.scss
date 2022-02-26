@@ -244,3 +244,17 @@ $btn-round-border-radius-sm:  1rem !default;
 $btn-round-border-radius-lg:  2rem !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// 头像
+$avatar-border-radius-sm:     0.2rem;
+$avatar-border-radius-medium: 0.25rem;
+$avatar-border-radius-large:  0.3rem;
+$avatar-sm:                   2rem;
+$avatar-medium:               2.25rem;
+$avatar-large:                2.5rem;
+
+$avatar-type: (
+  'small':   $avatar-sm,
+  'medium': $avatar-medium,
+  'large':  $avatar-large,
+);

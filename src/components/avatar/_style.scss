@@ -1,0 +1,22 @@
+.xy-avatar {
+  display: inline-block;
+  @each $key, $val in $avatar-type {
+    &.#{$key}  {
+      width: $val;
+      height: $val;
+      @if $key == 'small' {
+        border-radius: $avatar-border-radius-sm;
+      } @else if $key == 'medium' {
+        border-radius: $avatar-border-radius-medium;
+      } @else if $key == 'large' {
+        border-radius: $avatar-border-radius-large;
+      }
+    }
+  }
+  .file {
+    background-size: 100% 100%;
+  }
+  .round {
+    border-radius: 50%;
+  }
+}

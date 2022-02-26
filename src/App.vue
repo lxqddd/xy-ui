@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <XyAvatar>
-      hello world
-    </XyAvatar>
+    <XyAvatar
+      size="small"
+      src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp01%2F1ZZQ20QJS6-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648455857&t=9610ea62f26a07e8a429ddb1c36b323a"
+    />
+    <XyAvatar src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp01%2F1ZZQ20QJS6-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648455857&t=9610ea62f26a07e8a429ddb1c36b323a" />
+    <XyAvatar
+      size="large"
+      src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2Ftp01%2F1ZZQ20QJS6-0-lp.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648455857&t=9610ea62f26a07e8a429ddb1c36b323a"
+    />
     <XyIcon :size="'ri-10x'" />
     <h3>mini 按钮</h3>
     <XyButton

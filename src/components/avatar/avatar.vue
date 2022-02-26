@@ -43,8 +43,10 @@ const style = {
 }
 
 const classes = classNames('xy-avatar', props.className, {
-  round: props.round,
-  bordered: props.bordered
+  [`round`]: props.round,
+  [`bordered`]: props.bordered,
+  [`${props.size}`]: props.size,
+  [`${props.objectFit}`]: props.objectFit
 })
 
 console.log(classes)
